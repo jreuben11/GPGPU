@@ -1,31 +1,22 @@
 1. [quickstart](quickstart.ipynb)
-### JAX API
-- grad
-- jit
-- vmap
-- jacfwd, jacrev
-- hessian
-- random
-- pmap
-- lax.psum
-- device_put
-### jax.numpy
-- dot
-- tanh
-- sum
-- exp
-- vjp, jvp
-- stack
-- mean
-- where
-- arange
-- eye
-### jax.random
-- PRNGKey
-- normal
+   - Multiplying Matrices
+   - Using `jit()` to speed up functions
+   - Taking derivatives with `grad()`
+   - Auto-vectorization with `vmap()`
+   - JAX API: 
+     - `grad`, `jit`, `vmap`, `jacfwd` / `jacrev` / `hessian`, `pmap`, `device_put`
+     - `lax`:`psum`
+     - `jax.numpy`: `dot`, `tanh`, `sum`, `exp`, `vjp` / `jvp`, `stack`, `mean`, `where`, `arange`, `eye`
+     - `jax.random`: `PRNGKey`, `normal`
+
 
 2. [Thinking in JAX](thinking_in_jax.ipynb)
-### ipython
+   - JAX vs. NumPy
+   - NumPy, lax & XLA: JAX API layering
+   - To JIT or not to JIT
+   - JIT mechanics: tracing and static variables
+   - Static vs Traced Operations
+   - ipython:
 ```python
 # Configure ipython to hide long tracebacks.
 import sys
@@ -39,13 +30,18 @@ def minimal_traceback(*args, **kwargs):
   return ipython._showtraceback(etype, value, stb)
 
 ipython.showtraceback = minimal_traceback
-```
-### JAX API
-- lax.add
-- lax.conv_general_dilated
-- make_jaxpr
-### jax.numpy
-- add
-- convolve
-- float32
-- array
+``` 
+-JAX API:
+- `lax`: `add`, `conv_general_dilated`
+- `make_jaxpr`
+- `jax.numpy`: `add`, `convolve`, `float32`, `array`
+
+3. [THe sharp bits](Common_Gotchas_in_JAX.ipynb)
+   - 🔪 Pure functions - `lax.fori_loop`, `lax.cond`, `lax.scan`
+   - 🔪 In-Place Updates - `at`, `set`
+   - 🔪 Out-of-Bounds Indexing
+   - 🔪 Non-array inputs: NumPy vs. JAX
+   - 🔪 Random Numbers - `jax.random`: `PRNGKey`,`normal`, `split`
+   - 🔪 Control Flow - `f = jit(f, static_argnums=(0,))`
+   - 🔪 NaNs = `config.update / parse_flags_with_absl`
+   - 🔪 Double (64bit) precision `config.update("jax_enable_x64", True)`
