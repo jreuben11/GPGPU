@@ -45,3 +45,13 @@ ipython.showtraceback = minimal_traceback
    - 🔪 Control Flow - `f = jit(f, static_argnums=(0,))`
    - 🔪 NaNs = `config.update / parse_flags_with_absl`
    - 🔪 Double (64bit) precision `config.update("jax_enable_x64", True)`
+
+4. 101 Tutorials
+   1. [JAX As Accelerated NumPy](101_tutorials/01-jax-basics.ipynb)
+      -  Getting started with JAX numpy - `jnp.arange`, `jnp.dot`, `block_until_ready`
+      -  JAX first transformation: `jax.grad`
+      -  Value and Grad `jax.value_and_grad`
+      -  Auxiliary data `has_aux`
+      -  Differences from NumPy `at`, `set`
+      -  Your first JAX training loop: 1. sample data, 2. model, 3. loss, 4. update, 5. training loop :)
+   2. [Just In Time Compilation with JAX]
