@@ -17,24 +17,24 @@
    - JIT mechanics: tracing and static variables
    - Static vs Traced Operations
    - ipython:
-```python
-# Configure ipython to hide long tracebacks.
-import sys
-ipython = get_ipython()
+     ```python
+     # Configure ipython to hide long tracebacks.
+     import sys
+     ipython = get_ipython()
 
-def minimal_traceback(*args, **kwargs):
-  etype, value, tb = sys.exc_info()
-  value.__cause__ = None  # suppress chained exceptions
-  stb = ipython.InteractiveTB.structured_traceback(etype, value, tb)
-  del stb[3:-1]
-  return ipython._showtraceback(etype, value, stb)
+     def minimal_traceback(*args, **kwargs):
+       etype, value, tb = sys.exc_info()
+       value.__cause__ = None  # suppress chained exceptions
+       stb = ipython.InteractiveTB.structured_traceback(etype, value, tb)
+       del stb[3:-1]
+       return ipython._showtraceback(etype, value, stb)
 
-ipython.showtraceback = minimal_traceback
-``` 
--JAX API:
-- `lax`: `add`, `conv_general_dilated`
-- `make_jaxpr`
-- `jax.numpy`: `add`, `convolve`, `float32`, `array`
+     ipython.showtraceback = minimal_traceback
+     ``` 
+   -JAX API:
+     - `lax`: `add`, `conv_general_dilated`
+     - `make_jaxpr`
+     - `jax.numpy`: `add`, `convolve`, `float32`, `array`
 
 3. [THe sharp bits](Common_Gotchas_in_JAX.ipynb)
    - 🔪 Pure functions - `lax.fori_loop`, `lax.cond`, `lax.scan`
@@ -62,3 +62,9 @@ ipython.showtraceback = minimal_traceback
       - Manual Vectorization `jnp.stack`
       - Automatic Vectorization `jax.vmap` with `in_axes` and `out_axes`, ` jnp.transpose`
       - Combining transformations 
+   4. [Advanced Automatic Differentiation in JAX](101_tutorials/04-advanced-autodiff.ipynb)
+      - Higher-order derivatives ` jax.grad`, `jax.jacfwd` and `jax.jacrev`
+      - Higher order optimization -> Model-Agnostic Meta-Learning (**MAML**)
+      - Stopping gradients -> **TD(0)** (temporal difference) RL update `jax.lax.stop_gradient`
+      - Straight-through estimator using stop_gradient - **???**
+      - Per-example gradients ` jax.jit(jax.vmap(jax.grad(td_loss), in_axes=(None, 0, 0, 0)))`
