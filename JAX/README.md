@@ -58,4 +58,7 @@ ipython.showtraceback = minimal_traceback
       - How JAX transforms work `jax.make_jaxpr`
       - JIT compiling a function `jax.jit` , `jnp.where`
       - Why can’t we just JIT everything? ` jax.lax.cond`,  `static_argnums` / `static_argnames`, `functools.partial`
-   3. Automatic Vectorization in JAX
+   3. [Automatic Vectorization in JAX](101_tutorials/03-vectorization.ipynb)
+      - Manual Vectorization `jnp.stack`
+      - Automatic Vectorization `jax.vmap` with `in_axes` and `out_axes`, ` jnp.transpose`
+      - Combining transformations 
