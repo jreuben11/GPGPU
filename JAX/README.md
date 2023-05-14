@@ -71,3 +71,9 @@
    5. [Pseudo Random Numbers in JAX](101_tutorials/05-random-numbers.ipynb)
       - Random numbers in NumPy
       - Random numbers in JAX `random.PRNGKey`, `random.normal`, `random.split`
+   6. [Working with Pytrees](101_tutorials/05.1-pytrees.ipynb)
+      - What is a pytree? `jax.tree_util.tree_leaves`
+      - common pytree functions `jax.tree_map`
+      - Example: ML model parameters `jax.nn.relu`
+      - Custom pytree nodes `jax.tree_util.register_pytree_node`
+      - common gotchas and patterns `jax.tree_util.tree_transpose`, `jax.tree_util.tree_structure` 
