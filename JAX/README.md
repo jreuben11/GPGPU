@@ -54,4 +54,8 @@ ipython.showtraceback = minimal_traceback
       -  Auxiliary data `has_aux`
       -  Differences from NumPy `at`, `set`
       -  Your first JAX training loop: 1. sample data, 2. model, 3. loss, 4. update, 5. training loop :)
-   2. [Just In Time Compilation with JAX]
+   2. [Just In Time Compilation with JAX](101_tutorials/02-jitting.ipynb)
+      - How JAX transforms work `jax.make_jaxpr`
+      - JIT compiling a function `jax.jit` , `jnp.where`
+      - Why can’t we just JIT everything? ` jax.lax.cond`,  `static_argnums` / `static_argnames`, `functools.partial`
+   3. Automatic Vectorization in JAX
