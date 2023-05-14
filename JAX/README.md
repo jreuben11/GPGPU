@@ -68,3 +68,6 @@
       - Stopping gradients -> **TD(0)** (temporal difference) RL update `jax.lax.stop_gradient`
       - Straight-through estimator using stop_gradient - **???**
       - Per-example gradients ` jax.jit(jax.vmap(jax.grad(td_loss), in_axes=(None, 0, 0, 0)))`
+   5. [Pseudo Random Numbers in JAX](101_tutorials/05-random-numbers.ipynb)
+      - Random numbers in NumPy
+      - Random numbers in JAX `random.PRNGKey`, `random.normal`, `random.split`
