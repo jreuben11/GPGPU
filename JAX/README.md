@@ -82,4 +82,6 @@
       - basics: `jax.local_device_count()`,`jax.vmap`, `jax.pmap(in_axes)` 
       - Communication between devices  - `jax.lax.p*` ops: `psum`, `pmean`, `pmax`, etc - specify axis_name, 
       - `jax.value_and_grad`, `jax.tree_map`
-   
+   8. [Stateful Computations in JAX](101_tutorials/07-state.ipynb)
+      - pass explicit state in and out of FP methods
+  
