@@ -77,3 +77,9 @@
       - Example: ML model parameters `jax.nn.relu`
       - Custom pytree nodes `jax.tree_util.register_pytree_node`
       - common gotchas and patterns `jax.tree_util.tree_transpose`, `jax.tree_util.tree_structure` 
+   7. [Parallel Evaluation in JAX](101_tutorials/06-parallelism.ipynb) **requires TPU**
+      - Colab TPU Setup `jax.devices()`
+      - basics: `jax.local_device_count()`,`jax.vmap`, `jax.pmap(in_axes)` 
+      - Communication between devices  - `jax.lax.p*` ops: `psum`, `pmean`, `pmax`, etc - specify axis_name, 
+      - `jax.value_and_grad`, `jax.tree_map`
+   
