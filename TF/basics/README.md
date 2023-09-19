@@ -51,4 +51,13 @@
 ### string tensors
 - `tf.strings`: `split`, `to_number`
 ### sparse tensors
-- `tf.sparse.SparseTensor` 
+- `tf.sparse.SparseTensor`
+
+# 3. Introduction to Variables
+### create a variable
+- `tf.Variable`: `assign`, `assign_add`, `assign_sub`, `numpy`
+### lifecycles, naming and watching
+- properties: `name`, `trainable`
+### placing variables and tensors
+- `with tf.device('CPU:0')`
+- `tf.config.set_soft_device_placement`
