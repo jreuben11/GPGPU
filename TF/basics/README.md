@@ -102,3 +102,27 @@ print(tf_simple_relu.get_concrete_function(tf.constant(1)).graph.as_graph_def())
 - `tf.debugging`
 ### Seeing the speed-up
 ### when is a function tracing
+
+# 6. Introduction to modules, layers, and models
+### Defining models and layers in TensorFlow
+- `tf.Module`
+    - : ` __init__`, `__call__`. 
+    - `trainable_variables`, `variables`, `submodules`
+### deferred input shape
+### Saving weights
+- `tf.train.Checkpoint`: `write`, `restore`
+- `tf.train.list_variables`
+- `tf.checkpoint.CheckpointManager`
+### Saving and displaying function graphs
+- `tf.summary` : `create_file_writer`, `trace_on`, `trace_export`
+```python
+%load_ext tensorboard
+%tensorboard --logdir 
+```
+- `tf.saved_model`: `save`, `load`
+### Keras models and layers
+- `tf.Module` is base class for both `tf.keras.layers.Layer` and `tf.keras.Model`
+- `__call__` -> `call`, `build`
+- `tf.keras.Input`
+- `tf.keras.Model`: `inputs`, `outputs`, `summary`
+- `tf.keras.models.load_model`
