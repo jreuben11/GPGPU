@@ -82,3 +82,23 @@
 ### Getting a gradient of None
 ### Zeros instead of None
 - `tf.UnconnectedGradients.ZERO`
+
+
+# 5. Introduction to graphs and `tf.function`
+### overview
+- `tf.Graph`, `tf.Operation`, `tf.Tensor`
+### Taking advantage of graphs
+- `@tf.function`
+- `tf.autograph.to_code`
+```python
+tf_simple_relu = tf.function(simple_relu)
+print(tf.autograph.to_code(simple_relu))
+print(tf_simple_relu.get_concrete_function(tf.constant(1)).graph.as_graph_def())
+```
+- `ConcreteFunction`
+### Using tf.function
+- `tf.config.run_functions_eagerly`
+- `tf.print`
+- `tf.debugging`
+### Seeing the speed-up
+### when is a function tracing
