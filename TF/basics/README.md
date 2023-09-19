@@ -61,3 +61,24 @@
 ### placing variables and tensors
 - `with tf.device('CPU:0')`
 - `tf.config.set_soft_device_placement`
+
+# 4. Introduction to gradients and automatic differentiation
+### Computing gradients
+### Gradient tapes
+- `tf.GradientTape`: `gradient`
+- properties: `persistent`
+- `tf.nest`
+### Gradients with respect to a model
+-  `Module.trainable_variables`
+### Controlling what the tape watches
+- ` GradientTape.watched_variables`, `watch_accessed_variables`
+- ` GradientTape.watch`
+- `tf.math.sin`
+### Intermediate results
+### Notes on performance
+### Gradients of non-scalar targets
+- `tf.nn.sigmoid`
+### Control flow
+### Getting a gradient of None
+### Zeros instead of None
+- `tf.UnconnectedGradients.ZERO`
