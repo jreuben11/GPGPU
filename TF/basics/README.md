@@ -24,3 +24,31 @@
 - `tf.squeeze`
 - `tf.optimizers.SGD`: `apply_gradients`
 - `tf.keras.losses.MSE`
+
+
+# 2. Introduction to Tensors
+### basics
+- `tf.ones`, `tf.zeros`
+- `tf.add`, `tf.multiply`, `tf.matmul`
+- `tf.reduce_max`, `tf.argmax`, `tf.nn.softmax`
+### shapes
+- `tf.Tensor`: `shape`, `dtype`, `ndim`
+- ` tf.TensorShape`: `as_list`
+- `tf.size`
+### single/multi-axis Indexing
+### manipulating shapes
+-  `tf.reshape`
+### DTypes
+- `tf.dtypes.DType`
+### Broadcasting
+- ` tf.broadcast_to`
+### conversion
+- `tf.convert_to_tensor`
+- `tf.register_tensor_conversion_function`
+### ragged tensors
+- `tf.ragged.RaggedTensor`
+- `tf.ragged.constant`
+### string tensors
+- `tf.strings`: `split`, `to_number`
+### sparse tensors
+- `tf.sparse.SparseTensor` 
