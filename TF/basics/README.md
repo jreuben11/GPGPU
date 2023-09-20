@@ -126,3 +126,22 @@ print(tf_simple_relu.get_concrete_function(tf.constant(1)).graph.as_graph_def())
 - `tf.keras.Input`
 - `tf.keras.Model`: `inputs`, `outputs`, `summary`
 - `tf.keras.models.load_model`
+
+# 7. Basic training loops
+### Solving machine learning problems
+### data
+- `tf.linspace` , `tf.cast`, `tf.random.normal`
+### Define the model
+-  `tf.Variable`,  `tf.Module`
+- Define a loss function:
+`tf.reduce_mean`, `tf.square`
+- Define a training loop:
+- `tf.keras.optimizers`
+- `tf.GradientTape`: `gradient` 
+- `tf.assign_sub` (combines `tf.assign` and `tf.sub`)
+### The same solution, but with Keras
+- `tf.keras.Model`: `compile`, `fit`, `save_weights`
+- `tf.keras.optimizers.SGD`, `tf.keras.losses.mean_squared_error`
+```python
+keras_model.fit(x, y, epochs=10, batch_size=1000)
+```
