@@ -9,8 +9,8 @@
 7. [Basic training loops](basic_training_loops.ipynb)
 
 ## Keras basics
-1. [The Sequential model](sequential_model.ipynb)
-2. [The Functional API](functional_api.ipynb)
+1. [The Sequential model](keras_basics/sequential_model.ipynb)
+2. [The Functional API](keras_basics/functional_api.ipynb)
 3. Training and evaluation with the built-in methods
 4. Making new Layers and Models via subclassing
 5. Save and load Keras models
