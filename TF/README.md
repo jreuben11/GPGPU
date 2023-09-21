@@ -11,8 +11,8 @@
 ## Keras basics
 1. [The Sequential model](keras_basics/sequential_model.ipynb)
 2. [The Functional API](keras_basics/functional_api.ipynb)
-3. Training and evaluation with the built-in methods
-4. Making new Layers and Models via subclassing
-5. Save and load Keras models
-6. Working with preprocessing layers
+3. [Training and evaluation with the built-in methods](keras_basics/training_with_built_in_methods.ipynb)
+4. [Making new Layers and Models via subclassing](keras_basics/making_new_layers_and_models_via_subclassing.ipynb)
+5. Save and load Keras models 
+6. [Working with preprocessing layers](keras_basics/preprocessing_layers.ipynb)
 7. Customize what happens in Model.fit()
