@@ -12,3 +12,7 @@ JAX / TF / CUDA experiments
   - 04 Advanced AutoDiff in JAX
   - 05 Psuedo Random Numbers in JAX
   - 05.1 Working with PyTrees
+ 
+## [TensorFlow](TF/README.md)
+- basics
+- keras basics
